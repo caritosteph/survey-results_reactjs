@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router';
 import SurveyService from '../services/SurveyService';
+import SurveyList from '../components/SurveyList';
 
 class SurveyContainer extends React.Component {
 
@@ -22,17 +22,25 @@ class SurveyContainer extends React.Component {
       }
     })
     .catch(error => {
-      alert('Errorrr!!: ',error);
+      this.setState({error});
     });
   }
   render(){
+    let {survey_results,error} = this.state;
+    let view = null;
+
+    if(survey_results.length > 0) {
+      view = <SurveyList surveylist = {survey_results}/>
+    } else if (error !== '') {
+      view = <div>{error}</div>;
+    } else {
+      view = <div>Loading</div>;
+    }
+
     return (
       <div>
-      Survey Results
-        <ul role="nav">
-          <li><Link to="/survey/01">Surveys01</Link></li>
-          <li><Link to="/survey/02">Surveys02</Link></li>
-        </ul>
+        Survey Results
+        {view}
       </div>
     );
   }
