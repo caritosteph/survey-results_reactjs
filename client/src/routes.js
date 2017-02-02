@@ -1,9 +1,15 @@
 import React from 'react';
-import { Route } from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
-import App from './components/App';
+import MainContainer from './containers/MainContainer';
+import SurveyContainer from './containers/SurveyContainer';
+import SurveyDetail from './components/SurveyDetail';
 
 export default (
-  <Route path="/" component={App}>
-  </Route>
+  <Router history = {browserHistory}>
+    <Route path="/" component= {MainContainer}>
+      <IndexRoute component = {SurveyContainer} />
+      <Route path= "/survey/:id" component={SurveyDetail}/>
+    </Route>
+  </Router>
 );

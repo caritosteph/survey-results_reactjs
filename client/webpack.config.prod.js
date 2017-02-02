@@ -60,6 +60,7 @@ export default {
       {test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream&name=assets/fonts/[name].[ext]'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml&name=assets/images/[name].[ext]'},
       {test: /\.(jpe?g|png|gif)$/i, loader: 'file?name=assets/images/[name].[ext]'},
+      {test: /\.ico$/, loader: 'file?name=[name].[ext]'},
       {test: /(\.css|\.scss)$/, loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap')},
       {test: /\.json$/, loader: "json"}
     ]
