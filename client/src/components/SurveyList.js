@@ -1,29 +1,15 @@
-import React from 'react';
-import Survey from './Survey';
-import { Link } from 'react-router';
+import React, {PropTypes} from 'react';
 
-const SurveyList = (props) => {
-  let {surveylist} = props;
-
+const SurveyList = ({surveylist}) => {
   return (
     <div>
-    {
-      surveylist.map((survey,index) => {
-        return (
-          <div key = {index}>
-            <Link to={survey.url}>
-              <Survey survey = {survey}/>
-            </Link>
-          </div>
-        )
-      })
-    }
+      {surveylist}
     </div>
   );
 };
 
 SurveyList.propTypes = {
-
+  surveylist: PropTypes.array.isRequired
 };
 
 export default SurveyList;

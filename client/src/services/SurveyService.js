@@ -1,5 +1,5 @@
 import 'whatwg-fetch';
-import config from '../config.js';
+import config from '../config';
 
 class SurveyService {
 

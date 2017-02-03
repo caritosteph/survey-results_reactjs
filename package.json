@@ -10,7 +10,7 @@
     "clean-dist": "rimraf ./dist && mkdir dist",
     "open:dist": "babel-node client/tools/distServer.js",
     "build": "npm run clean-dist && babel-node client/tools/build.js && npm-run-all --parallel open:dist open:back",
-    "lint": "esw webpack.config.* src client/tools --color",
+    "lint": "esw webpack.config.* client/src client/tools server --color",
     "lint:watch": "npm run lint -- --watch"
   },
   "repository": {

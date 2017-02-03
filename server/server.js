@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+/* eslint-disable import/default */
+
 'use strict';
 
 import express from 'express';
