@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import ResponseList from '../components/ResponseList';
 import Response from '../components/Response';
+import Utils from '../utils/Utils';
 
 class ResponseListContainer extends Component {
 
@@ -15,7 +16,9 @@ class ResponseListContainer extends Component {
   }
 
   render() {
-    return <ResponseList responseList = {this._retrieveResponses()} />;
+    let {responseList} = this.props;
+    let average = Utils.average_rating(responseList);
+    return <ResponseList responseList = {this._retrieveResponses()} average = {average}/>;
   }
 }
 

@@ -5,7 +5,6 @@ const Question = ({question}) => {
     <div>
       QUESTION:
       <p>Description: {question.description}</p>
-      <p>Question Type: {question.question_type}</p>
       <ResponseListContainer responseList = {question.survey_responses}/>
     </div>
   );

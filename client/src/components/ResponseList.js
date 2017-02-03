@@ -1,10 +1,11 @@
 import React, {PropTypes} from 'react';
 
-const ResponseList = ({responseList}) => {
+const ResponseList = ({responseList, average}) => {
   return (
     <div>
       RESPONSES:
       {responseList}
+      <p>Promedio: {average}</p>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import ThemeListContainer from '../containers/ThemeListContainer';
+import Utils from '../utils/Utils';
 
 const SurveyDetail = ({surveyDetail}) => {
 
@@ -8,7 +9,7 @@ const SurveyDetail = ({surveyDetail}) => {
     SURVEY DETAILS
       <p>Name: {surveyDetail.name}</p>
       <p>Participant_count: {surveyDetail.participant_count}</p>
-      <p>Response Rate: {surveyDetail.response_rate}</p>
+      <p>Response Rate: {Utils.percentage_rate(surveyDetail.response_rate)} </p>
       <p>submitted_response_count: {surveyDetail.submitted_response_count}</p>
       <ThemeListContainer themeList = {surveyDetail.themes}/>
     </div>
