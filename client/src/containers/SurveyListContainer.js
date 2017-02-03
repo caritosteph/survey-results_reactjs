@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import SurveyList from '../components/SurveyList';
-import SurveyContainer from '../containers/SurveyContainer';
+// import SurveyContainer from '../containers/SurveyContainer';
+import Survey from '../components/Survey';
 
 class SurveyListContainer extends Component {
 
@@ -11,7 +12,7 @@ class SurveyListContainer extends Component {
 
   _retrieveSurveys () {
     let {surveylist} = this.props;
-    return surveylist.map((survey, index) => <SurveyContainer survey={survey} key={index} />);
+    return surveylist.map((survey, index) => <Survey survey = {survey} key = {index} />);
   }
 
   render() {
@@ -20,7 +21,6 @@ class SurveyListContainer extends Component {
 }
 
 SurveyListContainer.propTypes = {
-  _retrieveSurveys: PropTypes.func.isRequired,
   surveylist: PropTypes.array.isRequired
 };
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import SurveyService from '../services/SurveyService';
-// import SurveyList from '../components/SurveyList';
 import SurveyListContainer from '../containers/SurveyListContainer';
-
 
 class SurveyResultsContainer extends React.Component {
 
@@ -27,8 +25,10 @@ class SurveyResultsContainer extends React.Component {
       this.setState({error});
     });
   }
+
   render(){
-    let {survey_results,error} = this.state;
+
+    let {survey_results, error} = this.state;
     let view = null;
 
     if(survey_results.length > 0) {
@@ -47,8 +47,5 @@ class SurveyResultsContainer extends React.Component {
     );
   }
 }
-
-SurveyResultsContainer.propTypes = {
-};
 
 export default SurveyResultsContainer;
