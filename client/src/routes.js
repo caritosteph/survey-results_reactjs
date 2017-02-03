@@ -8,7 +8,6 @@ import SurveyDetailContainer from './containers/SurveyDetailContainer';
 export default (
   <Router history = {browserHistory}>
     <Route path="/" component= {MainContainer}>
-      {/*<IndexRoute component = {SurveyResultsContainer} />*/}
       <IndexRedirect to="/survey_results" />
       <Route path= "/survey_results" component={SurveyResultsContainer}/>
       <Route path= "/survey_results/:name" component={SurveyDetailContainer}/>

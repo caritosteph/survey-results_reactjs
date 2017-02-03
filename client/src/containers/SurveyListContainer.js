@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import SurveyList from '../components/SurveyList';
-// import SurveyContainer from '../containers/SurveyContainer';
 import Survey from '../components/Survey';
 
 class SurveyListContainer extends Component {

@@ -3,13 +3,15 @@ import { Link } from 'react-router';
 
 const Survey = ({survey}) => {
 
+  let pathname = '/survey_results/'+ survey.name.replace(/ /g, "");
+
   return (
-    <div className="survey_results">
+    <div>
       <p>Name: {survey.name}</p>
       <p>#Participants: {survey.participant_count}</p>
       <p>Response rate: {survey.response_rate}</p>
       <p>Submitted Response count: {survey.submitted_response_count}</p>
-      <Link to = {survey.url} ><button>More info</button></Link>
+      <Link to = {{pathname: pathname, state: {url: survey.url}}}><button>More info</button></Link>
     </div>
 
   );
