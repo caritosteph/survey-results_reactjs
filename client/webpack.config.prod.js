@@ -20,7 +20,10 @@ export default {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      'Promise': 'es6-promise'
+      'Promise': 'es6-promise',
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
     }),
     new WebpackMd5Hash(), // Using md5 to change names.
     new webpack.optimize.OccurenceOrderPlugin(),
