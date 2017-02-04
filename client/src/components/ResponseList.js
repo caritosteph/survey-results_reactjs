@@ -5,13 +5,14 @@ const ResponseList = ({responseList, average}) => {
     <div>
       RESPONSES:
       {responseList}
-      <p>Promedio: {average}</p>
+      <p>Average: {average}</p>
     </div>
   );
 };
 
 ResponseList.propTypes = {
-  responseList: PropTypes.array.isRequired
+  responseList: PropTypes.array.isRequired,
+  average: PropTypes.string.isRequired
 };
 
 export default ResponseList;

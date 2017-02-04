@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import SurveyDetail from '../components/SurveyDetail';
 import SurveyService from '../services/SurveyService';
 
@@ -50,6 +50,7 @@ class SurveyDetailContainer extends Component {
 }
 
 SurveyDetailContainer.propTypes = {
+  location: PropTypes.object.isRequired
 };
 
 export default SurveyDetailContainer;

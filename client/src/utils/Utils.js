@@ -6,14 +6,15 @@ class Utils {
 
   static average_rating(ratings){
     let sum = 0;
-    let count_rating = ratings.length;
+    let count_rating = 0;
     let average = 0;
     ratings.forEach(rating => {
       if(rating.response_content){
-        sum += parseInt(rating.response_content) ;
+        sum += parseInt(rating.response_content);
+        count_rating += 1;
       }
     });
-    average = Math.round((sum/count_rating)*10)/10;
+    average = (sum/count_rating).toFixed(1);
     return average;
   }
 }
