@@ -5,9 +5,8 @@
 import {render} from 'react-dom';
 import routes from './routes';
 import './assets/styles/main.scss';
-require('./favicon.ico');
 import "../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min";
-
+require('./favicon.ico');
 
 const rootEl = document.getElementById('app');
 

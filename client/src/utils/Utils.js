@@ -1,6 +1,6 @@
 class Utils {
   static percentage_rate(rate){
-    let percentage = Math.floor(rate * 100) + '%';
+    let percentage = Math.floor(rate * 100);
     return percentage;
   }
 

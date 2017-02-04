@@ -7,14 +7,33 @@ const Survey = ({survey}) => {
   let pathname = '/survey_results/'+ survey.name.replace(/ /g, "");
 
   return (
-    <div>
-      <p>Name: {survey.name}</p>
-      <p>#Participants: {survey.participant_count}</p>
-      <p>Response rate: {Utils.percentage_rate(survey.response_rate)}</p>
-      <p>Submitted Response count: {survey.submitted_response_count}</p>
-      <Link to = {{pathname: pathname, state: {url: survey.url}}}><button>More info</button></Link>
+    <div className = "col-md-6">
+      <div className = "panel panel-default">
+        <div className = "panel-heading">
+          <h4>{survey.name}</h4>
+        </div>
+        <div className = "panel-body">
+          <div className = "col-md-4">
+            <h3 className = "percentage-rate">{Utils.percentage_rate(survey.response_rate)}<sup>%</sup></h3>
+            <p>Participation rate</p>
+          </div>
+          <div className = "col-md-4 icon">
+            <i className = "fa fa-bar-chart"/>
+          </div>
+          <div className = "col-md-4">
+            <h4>{survey.participant_count}</h4>
+            <p>Participants</p>
+            <h4>{survey.submitted_response_count}</h4>
+            <p>Submitted responses</p>
+          </div>
+        </div>
+        <Link to = {{pathname: pathname, state: {url: survey.url}}} >
+        <div className = "panel-footer">
+        More information <i className="fa fa-arrow-circle-right"/>
+        </div>
+        </Link>
+      </div>
     </div>
-
   );
 };
 

@@ -40,10 +40,13 @@ class SurveyResultsContainer extends React.Component {
     }
 
     return (
-      <div>
-        Survey Results
-        {view}
-      </div>
+      <section>
+        <div className = "container">
+          <h2 className = "text-center">List of Survey Results</h2>
+          <h5 className = "text-center">For more details click on More information</h5>
+          <div className = "view-surveys">{view}</div>
+        </div>
+      </section>
     );
   }
 }
