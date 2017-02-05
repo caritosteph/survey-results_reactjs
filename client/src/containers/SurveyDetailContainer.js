@@ -42,9 +42,9 @@ class SurveyDetailContainer extends Component {
     }
 
     return (
-      <div>
+      <section>
         {view}
-      </div>
+      </section>
     );
   }
 }

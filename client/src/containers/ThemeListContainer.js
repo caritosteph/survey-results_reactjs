@@ -1,6 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import ThemeList from '../components/ThemeList';
-import Theme from '../components/Theme';
+// import Theme from '../components/Theme';
+import ThemeHeader from '../components/ThemeHeader';
+import ThemeBody from '../components/ThemeBody';
 
 class ThemeListContainer extends Component {
 
@@ -11,11 +13,18 @@ class ThemeListContainer extends Component {
 
   _retrieveThemes () {
     let {themeList} = this.props;
-    return themeList.map((theme, index) => <Theme theme = {theme} key = {index} />);
+    return  (
+      <div className = "nav-tabs-custom">
+        <ThemeHeader themeList = {themeList}/>
+        <ThemeBody themeList = {themeList}/>
+      </div>
+    );
   }
 
   render() {
-    return <ThemeList themeList = {this._retrieveThemes()} />;
+    return (
+      <ThemeList themeList = {this._retrieveThemes()} />
+    );
   }
 }
 

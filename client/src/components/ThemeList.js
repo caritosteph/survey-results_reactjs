@@ -9,7 +9,7 @@ const ThemeList = ({themeList}) => {
 };
 
 ThemeList.propTypes = {
-  themeList: PropTypes.array.isRequired
+  themeList: PropTypes.object.isRequired
 };
 
 export default ThemeList;
