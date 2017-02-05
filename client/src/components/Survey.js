@@ -4,7 +4,7 @@ import Utils from '../utils/Utils';
 
 const Survey = ({survey}) => {
 
-  let pathname = '/survey_results/'+ survey.name.replace(/ /g, "");
+  let pathname = survey.name.replace(/ /g, "");
 
   return (
     <div className = "col-md-6">
