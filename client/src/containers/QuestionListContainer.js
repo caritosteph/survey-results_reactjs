@@ -11,7 +11,7 @@ class QuestionListContainer extends Component {
 
   _retrieveQuestions () {
     let {questionList} = this.props;
-    return questionList.map((question, index) => <Question question = {question} key = {index} />);
+    return questionList.map((question, index) => <Question question = {question} key = {index} id = {index}/>);
   }
 
   render() {

@@ -183,7 +183,8 @@ a {
   .nav-tabs > li:not(.active) > a:hover {
     background-color: transparent;
     border-color: transparent;
-    color: #999;
+    color: $background-tabs-theme;
+    border-bottom-color: $background-tabs-theme;
   }
 }
 .nav-tabs-custom {
@@ -192,8 +193,38 @@ a {
    border-top-color: $color-tabs;
   }
 }
-.nav-tabs > li > a {
+.nav-tabs-justified > li > a {
   border-radius: 0;
+}
+
+/*
+ * Questions
+ */
+
+.box-question {
+  background: #ffffff;
+  border-top: 3px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+ }
+.box-question-header,
+.box-question-body,
+.box-question-footer {
+  padding: 10px;
+  border-bottom: 2px solid #f4f4f4;
+}
+.question-description{
+  color: #f39c12;
+  font-size: 16px;
+}
+
+/*
+ * Responses
+ */
+
+.responses-table-header th{
+  text-align: center;
 }
 
 /*

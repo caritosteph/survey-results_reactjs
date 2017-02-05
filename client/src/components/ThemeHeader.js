@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 const ThemeHeader = ({themeList}) => {
   return (
-    <ul className = "nav nav-tabs">
+    <ul className = "nav nav-tabs nav-justified">
       {
         themeList.map((theme, index) => {
 
