@@ -2,18 +2,22 @@ import React, {PropTypes} from 'react';
 
 const Rating = ({rating}) => {
 
-  const rating_starts = (starts) => {
-    let list_starts = [];
-    for (let i = 0; i < parseInt(starts); i++) {
-      list_starts.push(<i key= {i} className="fa fa-star"/>);
+  const rating_stars = (rating) => {
+    let stars = [];
+    for (let i = 0; i < 5; i++) {
+      if( i < parseInt(rating.rating)){
+        stars.push(<i key= {i} className = "fa fa-star"/>);
+      }else{
+        stars.push(<i key= {i} className = "fa fa-star-o"/>);
+      }
     }
-    return list_starts;
+    return stars;
   };
 
   return (
-    <div>
+    <div className = "rating-stars">
       {
-        rating_starts({rating})
+        rating_stars({rating})
       }
     </div>
   );

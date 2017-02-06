@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import ThemeList from '../components/ThemeList';
-// import Theme from '../components/Theme';
 import ThemeHeader from '../components/ThemeHeader';
 import ThemeBody from '../components/ThemeBody';
 
