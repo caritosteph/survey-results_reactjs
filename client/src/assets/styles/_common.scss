@@ -43,6 +43,17 @@ tbody {
 }
 
 /*
+ * Button Return
+ */
+
+.button-return a{
+  font-size: 21px;
+  &:hover {
+    color: #00a65a;
+  }
+}
+
+/*
  * Footer
  */
 

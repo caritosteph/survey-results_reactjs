@@ -1,12 +1,15 @@
 import React, {PropTypes} from 'react';
 import ThemeListContainer from '../containers/ThemeListContainer';
 import Utils from '../utils/Utils';
+import ButtonReturn from '../components/common/ButtonReturn';
 
 const SurveyDetail = ({surveyDetail}) => {
 
   return (
     <div className = "container">
+      <ButtonReturn />
       <div className = "col-md-6 col-md-offset-3 survey-detail">
+
         <div className = "survey-detail-header">
           <div className = "col-md-3 col-sm-3 col-xs-3 icon-detail">
             <i className = "fa fa-bar-chart"/>

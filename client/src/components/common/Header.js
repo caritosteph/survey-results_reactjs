@@ -1,11 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 const Header = () => {
   return (
     <header className = "main-header">
-      <a href="/" className = "logo">
+      <Link to="/" className = "logo">
         <div className = "logo-name"><b>Survey</b>Results</div>
-      </a>
+      </Link>
       <nav className = "navbar navbar-static-top"/>
     </header>
   );
