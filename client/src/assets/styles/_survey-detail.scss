@@ -86,12 +86,11 @@
 .box-question {
   background: $background-color-white;
   border-top: 3px solid #ccc;
-  margin-bottom: 20px;
+  padding-bottom: 50px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
  }
 .box-question-header,
-.box-question-body,
-.box-question-footer {
+.box-question-body{
   padding: 10px;
   border-bottom: 2px solid #f4f4f4;
 }

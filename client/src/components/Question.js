@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import ResponseListContainer from '../containers/ResponseListContainer';
-import Pagination from './common/Pagination';
+// import Pagination from './common/Pagination';
 
 const Question = ({question, id}) => {
   return (
@@ -11,10 +11,7 @@ const Question = ({question, id}) => {
           <h6>{question.description}</h6>
         </div>
         <div className = "box-question-body">
-          <ResponseListContainer responseList = {question.survey_responses}/>
-        </div>
-        <div className = "box-question-footer clearfix">
-          <Pagination />
+          <ResponseListContainer responseList = {question.survey_responses} perPage={5}/>
         </div>
       </div>
     </div>
