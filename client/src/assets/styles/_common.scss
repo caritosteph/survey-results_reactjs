@@ -1,12 +1,12 @@
 body, html {
   height: 100%;
-  background-color: $background-color-body;
+  background-color: $background-body;
 }
 a {
-  color: #555;
+  color: $link-color;
   &:hover {
     text-decoration: none;
-    color: $font-color-white;
+    color: $font-white;
   }
 }
 .no-margin {
@@ -38,8 +38,8 @@ tbody {
  */
 
 .alert-danger {
-  background-color: #dd4b39 !important;
-  color: #fff;
+  background-color: $aler-danger !important;
+  color: $font-white;
 }
 
 /*
@@ -49,7 +49,7 @@ tbody {
 .button-return a{
   font-size: 21px;
   &:hover {
-    color: #00a65a;
+    color: $button-return-hover;
   }
 }
 
@@ -70,7 +70,7 @@ tbody {
   padding: 0.5em;
   bottom: 0;
   width: 100%;
-  background-color: $background-color-headfoot;
-  color: $font-color-white;
+  background-color: $background-footer;
+  color: $font-white;
   text-align: center;
 }

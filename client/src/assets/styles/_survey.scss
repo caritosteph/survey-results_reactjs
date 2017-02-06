@@ -11,18 +11,18 @@
   padding-top: 80px;
 }
 .panel {
-  background-color: $background-color-panel!important;
+  background-color: $background-panel!important;
 }
 .panel,
 .panel-heading,
 .panel-body, .panel-footer {
    border-radius: 0;
-   border-color: $background-color-panel!important;
-   color: $font-color-white;
+   border-color: $background-panel!important;
+   color: $font-white;
  }
 .panel-heading {
   text-align: center;
-  color: $font-color-white!important;
+  color: $font-white!important;
   padding-top: 5px;
   padding-bottom: 2px;
   background: rgba(0,0,0,0.1)!important;
@@ -38,7 +38,7 @@
 .panel-footer {
   text-align: center;
   padding: 3px 0;
-  color: $font-color-white;
+  color: $font-white;
   background: rgba(0,0,0,0.1)!important;
   opacity: 0.7;
   cursor: pointer;

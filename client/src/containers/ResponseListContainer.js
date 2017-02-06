@@ -12,7 +12,11 @@ class ResponseListContainer extends Component {
       offset: 0,
       maxOffset: 5,
       pageCount: 1
-    }
+    };
+  }
+
+  componentWillMount() {
+    this._loadResponseList();
   }
 
   _loadResponseList() {
@@ -27,10 +31,6 @@ class ResponseListContainer extends Component {
     });
   }
 
-  componentWillMount() {
-    this._loadResponseList();
-  }
-
   handlePageClick = (responses) => {
   let {perPage} = this.props;
    let selected = responses.selected;
@@ -43,30 +43,31 @@ class ResponseListContainer extends Component {
   render() {
     let {responses} = this.state;
     let {responseList} = this.props;
-    let average = Utils.average_rating(responseList);
+    let average = Utils.averageRating(responseList);
 
     return (
       <div>
         <ResponseList responseList = {responses} average = {average}/>
         <ReactPaginate
-          previousLabel={"«"}
-          nextLabel={"»"}
-          breakLabel={<a href="#">...</a>}
-          breakClassName={"break-me"}
-          pageCount={this.state.pageCount}
-          marginPagesDisplayed={1}
-          pageRangeDisplayed={4}
-          onPageChange={this.handlePageClick}
-          containerClassName={"pagination pagination-sm  pull-right"}
-          subContainerClassName={"pages pagination"}
-          activeClassName={"active"} />
+          previousLabel = {"«"}
+          nextLabel = {"»"}
+          breakLabel = {<a href="#">...</a>}
+          breakClassName = {"break-me"}
+          pageCount = {this.state.pageCount}
+          marginPagesDisplayed = {1}
+          pageRangeDisplayed = {4}
+          onPageChange = {this.handlePageClick}
+          containerClassName = {"pagination pagination-sm  pull-right"}
+          subContainerClassName = {"pages pagination"}
+          activeClassName = {"active"} />
       </div>
     );
   }
 }
 
 ResponseListContainer.propTypes = {
-  responseList: PropTypes.array.isRequired
+  responseList: PropTypes.array.isRequired,
+  perPage: PropTypes.number.isRequired
 };
 
 export default ResponseListContainer;

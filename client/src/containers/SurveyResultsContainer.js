@@ -9,18 +9,18 @@ class SurveyResultsContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      survey_results: [],
+      surveyResults: [],
       error: ''
     };
   }
 
   componentWillMount(){
-    let survey_service = SurveyService.getSurveyResults('/survey_results');
-    survey_service
+    let surveyService = SurveyService.getSurveyResults('/survey_results');
+    surveyService
     .then(response => {
       if(response.success && response.data) {
-        let survey_results = response.data.survey_results;
-        this.setState({survey_results});
+        let surveyResults = response.data.survey_results;
+        this.setState({surveyResults});
       }else{
         this.setState({error: response.msg});
       }
@@ -32,11 +32,11 @@ class SurveyResultsContainer extends React.Component {
 
   render(){
 
-    let {survey_results, error} = this.state;
+    let {surveyResults, error} = this.state;
     let view = null;
 
-    if(survey_results.length > 0) {
-      view = <SurveyListContainer surveylist = {survey_results}/>;
+    if(surveyResults.length > 0) {
+      view = <SurveyListContainer surveylist = {surveyResults}/>;
     } else if (error !== '') {
       view = <Error error = {error}/>;
     } else {

@@ -18,7 +18,7 @@ const SurveyDetail = ({surveyDetail}) => {
         </div>
         <div className = "survey-detail-body">
           <div className = "survey-detail-rate">
-            <h2 className = "detail-rate">{Utils.percentage_rate(surveyDetail.response_rate)}<sup>%</sup></h2>
+            <h2 className = "detail-rate">{Utils.percentageRate(surveyDetail.response_rate)}<sup>%</sup></h2>
           </div>
         </div>
         <div className = "survey-detail-footer">

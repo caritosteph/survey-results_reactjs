@@ -14,7 +14,7 @@ const Survey = ({survey}) => {
         </div>
         <div className = "panel-body">
           <div className = "col-md-4 panel-body-rate">
-            <h3 className = "percentage-rate">{Utils.percentage_rate(survey.response_rate)}<sup>%</sup></h3>
+            <h3 className = "percentage-rate">{Utils.percentageRate(survey.response_rate)}<sup>%</sup></h3>
             <p>Participation rate</p>
           </div>
           <div className = "col-md-4 icon">

@@ -26,19 +26,19 @@
   }
 }
 .navbar {
-  background-color: $background-color-headfoot;
+  background-color: $background-navbar;
 }
 .logo-name {
   padding-top: 8px;
 }
 .logo {
-  background-color: #367fa9;
-  color: $font-color-white;
+  background-color: $background-logo;
+  color: $font-white;
   border-bottom: 0 solid transparent;
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $font-color-white;
-    background-color: $background-color-logo;
+    color: $font-white;
+    background-color: $background-logo-focus;
   }
 }

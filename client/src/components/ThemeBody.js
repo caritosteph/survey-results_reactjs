@@ -11,7 +11,7 @@ const ThemeBody = ({themeList}) => {
           let active = index === 0 ? 'tab-pane active' : 'tab-pane';
 
           return (
-            <div className = {active} key= {index} id = {tabId}>
+            <div className = {active} key = {index} id = {tabId}>
               <QuestionListContainer questionList = {theme.questions}/>
             </div>
           );

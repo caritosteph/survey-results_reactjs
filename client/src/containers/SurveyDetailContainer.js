@@ -9,7 +9,7 @@ class SurveyDetailContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      survey_result_detail: null,
+      surveyResultDetail: null,
       error: ''
     };
   }
@@ -17,12 +17,12 @@ class SurveyDetailContainer extends Component {
   componentWillMount(){
     let url = this.props.location.state.url;
 
-    let survey_service = SurveyService.getSurveyResults(url);
-    survey_service
+    let surveyService = SurveyService.getSurveyResults(url);
+    surveyService
     .then(response => {
       if(response.success && response.data) {
-        let survey_result_detail = response.data.survey_result_detail;
-        this.setState({survey_result_detail});
+        let surveyResultDetail = response.data.survey_result_detail;
+        this.setState({surveyResultDetail});
       }
     })
     .catch(error => {
@@ -31,11 +31,11 @@ class SurveyDetailContainer extends Component {
   }
 
   render() {
-    let {survey_result_detail, error} = this.state;
+    let {surveyResultDetail, error} = this.state;
     let view = null;
 
-    if(survey_result_detail) {
-      view = <SurveyDetail surveyDetail = {survey_result_detail}/>;
+    if(surveyResultDetail) {
+      view = <SurveyDetail surveyDetail = {surveyResultDetail}/>;
     } else if (error !== '') {
       view = <Error error = {error}/>;
     } else {

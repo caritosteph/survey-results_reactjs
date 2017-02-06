@@ -6,12 +6,12 @@ const ThemeHeader = ({themeList}) => {
       {
         themeList.map((theme, index) => {
 
-          let href = "#"+theme.name.replace(/ /g, "");
+          let href = "#" + theme.name.replace(/ /g, "");
           let active = index === 0 ? 'active' : '';
 
           return (
-            <li className = {active} key= {index} >
-              <a href = {href} data-toggle="tab">{theme.name}</a>
+            <li className = {active} key = {index} >
+              <a href = {href} data-toggle ="tab">{theme.name}</a>
             </li>
           );
         })

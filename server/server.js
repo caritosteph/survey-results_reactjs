@@ -16,24 +16,12 @@ app.use(function(req, res, next) {
 });
 
 app.get('/survey_results', (req, res) => {
-  Utils.readJSONFile(config.resultsPath)
-  .then(data => {
-     Utils.send_data(res, true, data);
-  })
-  .catch(error => {
-     Utils.send_data(res, false, error);
-  });
+  Utils.readJSONFile(res, config.resultsPath);
 });
 
 app.get('/survey_results/:id', (req, res) => {
   let id = req.params.id;
-  Utils.readJSONFile(config.detailPath + '/' + id)
-  .then(data => {
-     Utils.send_data(res, true, data);
-  })
-  .catch(error => {
-     Utils.send_data(res, false, error);
-  });
+  Utils.readJSONFile(res, config.detailPath + '/' + id);
 });
 
 app.listen(config.port, () => {

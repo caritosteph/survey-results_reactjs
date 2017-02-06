@@ -4,7 +4,7 @@ import config from '../configs/config';
 class SurveyService {
 
   static getSurveyResults(url) {
-    return fetch(config.base_url + url, {
+    return fetch(config.baseUrl + url, {
       method: 'GET',
       mode: 'cors'
     })

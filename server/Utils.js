@@ -1,20 +1,19 @@
-import fs from 'fs';
+import fs from 'fs-promise';
 
 class Utils {
 
-  static readJSONFile(filename) {
-    return new Promise ((resolve, reject) => {
-      fs.readFile(filename, (error, data) => {
-        if(!error){
-          resolve(JSON.parse(data));
-        }else{
-          reject('Unexpected error');
-        }
+  static readJSONFile(res, filename) {
+    return fs.readJson(filename)
+      .then(data => {
+        return Utils.sendData(res, true, data);
+      })
+      .catch(error => {
+        let messageError = error ? error : 'Unexpected error';
+        return  Utils.sendData(res, false, messageError);
       });
-    });
   }
 
-  static send_data(res, value, data) {
+  static sendData(res, value, data) {
     let json = {};
     value ? json = {data: data, success: value} : json = {msg: data, success: value};
     res.setHeader('Content-Type', 'application/json');
