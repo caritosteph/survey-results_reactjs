@@ -6,10 +6,10 @@ browserSync({
     port: 4001
   },
   server: {
-    baseDir: 'dist/'
+    baseDir: 'client/dist/'
   },
 
   files: [
-    'src/*.html'
+    'client/src/*.html'
   ]
 });
