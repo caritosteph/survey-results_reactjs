@@ -1,7 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import SurveyDetail from '../components/SurveyDetail';
 import SurveyService from '../services/SurveyService';
-
+import Loading from '../components/common/Loading';
+import Error from '../components/common/Error';
 
 class SurveyDetailContainer extends Component {
 
@@ -36,9 +37,9 @@ class SurveyDetailContainer extends Component {
     if(survey_result_detail) {
       view = <SurveyDetail surveyDetail = {survey_result_detail}/>;
     } else if (error !== '') {
-      view = <div>{error}</div>;
+      view = <Error error = {error}/>;
     } else {
-      view = <div>Loading</div>;
+      view = <Loading/>;
     }
 
     return (

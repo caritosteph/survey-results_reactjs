@@ -1,6 +1,8 @@
 import React from 'react';
 import SurveyService from '../services/SurveyService';
 import SurveyListContainer from '../containers/SurveyListContainer';
+import Loading from '../components/common/Loading';
+import Error from '../components/common/Error';
 
 class SurveyResultsContainer extends React.Component {
 
@@ -19,6 +21,8 @@ class SurveyResultsContainer extends React.Component {
       if(response.success && response.data) {
         let survey_results = response.data.survey_results;
         this.setState({survey_results});
+      }else{
+        this.setState({error: response.msg});
       }
     })
     .catch(error => {
@@ -34,9 +38,9 @@ class SurveyResultsContainer extends React.Component {
     if(survey_results.length > 0) {
       view = <SurveyListContainer surveylist = {survey_results}/>;
     } else if (error !== '') {
-      view = <div>{error}</div>;
+      view = <Error error = {error}/>;
     } else {
-      view = <div>Loading</div>;
+      view = <Loading/>;
     }
 
     return (
