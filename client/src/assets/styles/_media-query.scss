@@ -1,0 +1,38 @@
+@media (max-width: 1024px) {
+  .survey-detail-name{
+    padding-left: 25px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .panel-body-rate{
+    text-align: center;
+  }
+  .icon-detail {
+    text-align: left;
+  }
+  .survey-detail-name{
+    padding-left: 90px;
+  }
+}
+
+@media (max-width: 425px) {
+  .panel-body-rate{
+    text-align: center;
+  }
+  .icon-detail {
+    font-size: 60px;
+  }
+  .survey-detail-name{
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 320px) {
+  .icon-detail {
+    font-size: 50px;
+  }
+  .survey-detail-name{
+    font-size: 19px;
+  }
+}

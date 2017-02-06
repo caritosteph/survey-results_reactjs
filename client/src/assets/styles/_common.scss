@@ -1,0 +1,57 @@
+body, html {
+  height: 100%;
+  background-color: $background-color-body;
+}
+a {
+  color: #555;
+  &:hover {
+    text-decoration: none;
+    color: $font-color-white;
+  }
+}
+.no-margin {
+  margin: 0 !important;
+}
+.pull-right {
+  float: right;
+}
+tbody {
+  text-align: center;
+}
+.tab-pane {
+  margin-top: 20px;
+}
+
+
+/*
+ * Loading
+ */
+
+.overlay {
+  font-size: 50px;
+  padding-top: 10%;
+  text-align: center;
+}
+
+/*
+ * Error Alert
+ */
+
+.alert-danger {
+  background-color: #dd4b39 !important;
+  color: #fff;
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+  position: fixed;
+  padding: 0.5em;
+  bottom: 0;
+  width: 100%;
+  background-color: $background-color-headfoot;
+  color: $font-color-white;
+  text-align: center;
+}

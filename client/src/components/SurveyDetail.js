@@ -8,10 +8,10 @@ const SurveyDetail = ({surveyDetail}) => {
     <div className = "container">
       <div className = "col-md-6 col-md-offset-3 survey-detail">
         <div className = "survey-detail-header">
-          <div className = "col-md-1 icon">
+          <div className = "col-md-3 col-sm-3 col-xs-3 icon-detail">
             <i className = "fa fa-bar-chart"/>
           </div>
-          <h3 className = "survey-detail-name">{surveyDetail.name}</h3>
+          <div className = "col-md-9 col-sm-9 col-xs-9 survey-detail-name">{surveyDetail.name}</div>
         </div>
         <div className = "survey-detail-body">
           <div className = "survey-detail-rate">
@@ -19,11 +19,11 @@ const SurveyDetail = ({surveyDetail}) => {
           </div>
         </div>
         <div className = "survey-detail-footer">
-          <div className = "col-md-6 survey-detail-info">
+          <div className = "col-md-6 col-sm-6 col-xs-6 survey-detail-info">
             <strong>{surveyDetail.participant_count}</strong>
             <p>Participants</p>
           </div>
-          <div className = "col-md-6">
+          <div className = "col-md-6 col-sm-6 col-xs-6 ">
             <strong>{surveyDetail.submitted_response_count}</strong>
             <p>Submitted responses</p>
           </div>

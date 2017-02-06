@@ -6,10 +6,10 @@ const Average = ({average}) => {
       <div className = "col-md-5">
         <h5>Average: </h5>
       </div>
-      <div className = "col-md-2 box-average-star bg-red">
+      <div className = "col-md-2 col-sm-2 col-xs-2 box-average-star bg-red">
         <i className = "fa fa-star-o"/>
       </div>
-      <div className = "col-md-2 box-average-info">
+      <div className = "col-md-2 col-sm-2 col-xs-2 box-average-info">
         <p>{average}</p>
       </div>
     </div>
