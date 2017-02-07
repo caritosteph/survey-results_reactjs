@@ -1,10 +1,10 @@
 /* eslint-env mocha */
 
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from 'chai';
-import Question from '../../components/Question';
-import ResponseListContainer from '../../containers/ResponseListContainer';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import Question from '../../src/components/Question';
+import ResponseListContainer from '../../src/containers/ResponseListContainer';
 
 describe('<Question />', () => {
   it('should show a description question', () => {
@@ -21,7 +21,7 @@ describe('<Question />', () => {
     };
     const id = 1;
 
-    const wrapper =  shallow(<Question question = {question} id = {id}/>);
+    const wrapper =  shallow(<Question question = {question} id = {id} />);
     const actual = wrapper.find('h6').text();
     const expected = question.description;
 
@@ -61,7 +61,7 @@ describe('<Question />', () => {
       ]
     };
 
-    const wrapper =  shallow(<Question question = {question} id = {0}/>);
+    const wrapper =  shallow(<Question question = {question} id = {0} />);
     const actual = wrapper.find(ResponseListContainer).length;
     const expected = 1;
 

@@ -1,13 +1,13 @@
 /* eslint-env mocha */
 
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from 'chai';
-import ButtonReturn from '../../../components/common/ButtonReturn';
+import { shallow } from 'enzyme';
+import { expect } from 'chai';
+import Header from '../../../src/components/common/Header';
 
-describe('<ButtonReturn />', () => {
+describe('<Header />', () => {
   it('should link to initial root path', () => {
-    const wrapper =  shallow(<ButtonReturn />);
+    const wrapper =  shallow(<Header />);
     const actual = wrapper.findWhere( n => n.prop('to') === '/').length;
     const expected = 1;
 
