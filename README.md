@@ -1,8 +1,7 @@
 # Survey application
 
-## Installation
+## Installation Dependencies
 ```
-git clone https://github.com/caritosteph/surveyresults-cultureamp.git
 npm install
 ```
 ####Development Environment
@@ -11,7 +10,7 @@ npm run start
 ```
 ####Production Environment
 ```
-npm run built
+npm run build
 ```
 ####Test Environment
 ```
