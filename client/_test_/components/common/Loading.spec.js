@@ -11,7 +11,7 @@ describe('<Loading />', () => {
     const actual = wrapper.find('h4').text();
     const expected = 'Loading...';
 
-    expect(actual).to.equal(expected);
+    expect(actual).to.be.equal(expected);
   });
 
   it('should show a loading icon', () => {
@@ -19,6 +19,6 @@ describe('<Loading />', () => {
     const actual = wrapper.find('i').prop('className');
     const expected = 'fa fa-refresh fa-spin';
 
-    expect(actual).to.equal(expected);
+    expect(actual).to.be.equal(expected);
   });
 });

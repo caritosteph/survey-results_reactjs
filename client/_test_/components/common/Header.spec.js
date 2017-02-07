@@ -11,7 +11,7 @@ describe('<Header />', () => {
     const actual = wrapper.findWhere( n => n.prop('to') === '/').length;
     const expected = 1;
 
-    expect(actual).to.equal(expected);
+    expect(actual).to.be.equal(expected);
   });
 
 });

@@ -7,6 +7,7 @@ process.env.NODE_ENV = 'test';
 });
 
 require('babel-register')();
+require('isomorphic-fetch');
 
 const jsdom = require('jsdom').jsdom;
 const exposedProperties = ['window', 'navigator', 'document'];

@@ -12,7 +12,8 @@
     "build": "npm run clean-dist && babel-node client/tools/build.js && npm-run-all --parallel open:dist open:back",
     "lint": "esw webpack.config.* client/src client/tools server --color",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha client/tools/testServer.js client/**/*.spec.js --reporter progress",
+    "test": "mocha client/tools/testServer.js client/**/*.spec.js --reporter spec",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
