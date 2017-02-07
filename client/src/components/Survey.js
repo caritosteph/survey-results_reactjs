@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react';
-import { Link } from 'react-router';
-import Utils from '../utils/Utils';
+import React, { PropTypes } from "react";
+import { Link } from "react-router";
+import Utils from "../utils/Utils";
 
 const Survey = ({survey}) => {
 
@@ -32,9 +32,9 @@ const Survey = ({survey}) => {
           </div>
         </div>
         <Link to = {{pathname: pathname, state: {url: survey.url}}} >
-        <div className = "panel-footer">
-        More information <i className="fa fa-arrow-circle-right"/>
-        </div>
+          <div className = "panel-footer">
+            More information <i className="fa fa-arrow-circle-right"/>
+          </div>
         </Link>
       </div>
     </div>

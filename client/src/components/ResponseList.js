@@ -1,12 +1,12 @@
-import React, {PropTypes} from 'react';
-import Average from './common/Average';
-import Response from './Response';
+import React, { PropTypes } from "react";
+import Average from "./common/Average";
+import Response from "./Response";
 
 const ResponseList = ({responseList, average}) => {
   return (
     <div>
-      <Average average = {average}/>
-      <Response responseList = {responseList}/>
+      <Average average = {average} />
+      <Response responseList = {responseList} />
     </div>
   );
 };

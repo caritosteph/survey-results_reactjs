@@ -1,7 +1,7 @@
-import React, {PropTypes} from 'react';
-import ThemeListContainer from '../containers/ThemeListContainer';
-import Utils from '../utils/Utils';
-import ButtonReturn from '../components/common/ButtonReturn';
+import React, { PropTypes } from "react";
+import ThemeListContainer from "../containers/ThemeListContainer";
+import Utils from "../utils/Utils";
+import ButtonReturn from "../components/common/ButtonReturn";
 
 const SurveyDetail = ({surveyDetail}) => {
 
@@ -9,16 +9,18 @@ const SurveyDetail = ({surveyDetail}) => {
     <div className = "container">
       <ButtonReturn />
       <div className = "col-md-6 col-md-offset-3 survey-detail">
-
         <div className = "survey-detail-header">
           <div className = "col-md-3 col-sm-3 col-xs-3 icon-detail">
             <i className = "fa fa-bar-chart"/>
           </div>
-          <div className = "col-md-9 col-sm-9 col-xs-9 survey-detail-name">{surveyDetail.name}</div>
+          <div className = "col-md-9 col-sm-9 col-xs-9 survey-detail-name">
+            {surveyDetail.name}
+          </div>
         </div>
         <div className = "survey-detail-body">
           <div className = "survey-detail-rate">
             <h2 className = "detail-rate">{Utils.percentageRate(surveyDetail.response_rate)}<sup>%</sup></h2>
+            <p className = "participation-rate">Participation Rate</p>
           </div>
         </div>
         <div className = "survey-detail-footer">
@@ -33,7 +35,7 @@ const SurveyDetail = ({surveyDetail}) => {
         </div>
       </div>
       <div className = "col-md-12">
-        <ThemeListContainer themeList = {surveyDetail.themes}/>
+        <ThemeListContainer themeList = {surveyDetail.themes} />
       </div>
     </div>
   );

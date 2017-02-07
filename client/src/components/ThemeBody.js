@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import QuestionListContainer from '../containers/QuestionListContainer';
+import React, { PropTypes } from "react";
+import QuestionListContainer from "../containers/QuestionListContainer";
 
 const ThemeBody = ({themeList}) => {
   return (
@@ -8,11 +8,11 @@ const ThemeBody = ({themeList}) => {
         themeList.map((theme, index) => {
 
           let tabId = theme.name.replace(/ /g, "");
-          let active = index === 0 ? 'tab-pane active' : 'tab-pane';
+          let active = (index === 0 ? "tab-pane active" : "tab-pane");
 
           return (
             <div className = {active} key = {index} id = {tabId}>
-              <QuestionListContainer questionList = {theme.questions}/>
+              <QuestionListContainer questionList = {theme.questions} />
             </div>
           );
         })

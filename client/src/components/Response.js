@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import Rating from './common/Rating';
+import React, { PropTypes } from "react";
+import Rating from "./common/Rating";
 
 const Response = ({responseList}) => {
   return (
@@ -18,7 +18,7 @@ const Response = ({responseList}) => {
               <tr key = {index}>
                 <td>{response.respondent_id}</td>
                 <td><Rating rating = {response.response_content} /></td>
-                <td>{response.response_content ? response.response_content : '0'}</td>
+                <td>{response.response_content ? response.response_content : "-"}</td>
               </tr>
             );
           })

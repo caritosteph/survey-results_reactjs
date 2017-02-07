@@ -1,21 +1,21 @@
-import React from 'react';
-import SurveyService from '../services/SurveyService';
-import SurveyListContainer from '../containers/SurveyListContainer';
-import Loading from '../components/common/Loading';
-import Error from '../components/common/Error';
+import React, { Component } from "react";
+import SurveyService from "../services/SurveyService";
+import SurveyListContainer from "../containers/SurveyListContainer";
+import Loading from "../components/common/Loading";
+import Error from "../components/common/Error";
 
-class SurveyResultsContainer extends React.Component {
+class SurveyResultsContainer extends Component {
 
   constructor(props){
     super(props);
     this.state = {
       surveyResults: [],
-      error: ''
+      error: ""
     };
   }
 
   componentWillMount(){
-    let surveyService = SurveyService.getSurveyResults('/survey_results');
+    let surveyService = SurveyService.getSurveyResults("/survey_results");
     surveyService
     .then(response => {
       if(response.success && response.data) {
@@ -31,16 +31,15 @@ class SurveyResultsContainer extends React.Component {
   }
 
   render(){
-
     let {surveyResults, error} = this.state;
     let view = null;
 
     if(surveyResults.length > 0) {
-      view = <SurveyListContainer surveylist = {surveyResults}/>;
-    } else if (error !== '') {
-      view = <Error error = {error}/>;
+      view = <SurveyListContainer surveylist = {surveyResults} />;
+    } else if (error !== "") {
+      view = <Error error = {error} />;
     } else {
-      view = <Loading/>;
+      view = <Loading />;
     }
 
     return (

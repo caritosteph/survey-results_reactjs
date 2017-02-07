@@ -1,9 +1,9 @@
 /* eslint-env mocha */
 
-import React from 'react';
-import { shallow } from 'enzyme';
-import { expect } from 'chai';
-import Response from '../../src/components/Response';
+import React from "react";
+import { shallow } from "enzyme";
+import { expect } from "chai";
+import Response from "../../src/components/Response";
 
 const responseList = [{
   id: 1,
@@ -21,10 +21,10 @@ const setup = () => {
   return shallow(<Response responseList = {responseList} />);
 }
 
-describe('<Response />', () => {
-  it('should show the same number of responses than responseList variable send', () => {
+describe("<Response />", () => {
+  it("should show the same number of responses than responseList variable send", () => {
     const wrapper = setup();
-    const actual = wrapper.find('tbody').children().length;
+    const actual = wrapper.find("tbody").children().length;
     const expected = responseList.length;
 
     expect(actual).to.be.equal(expected);

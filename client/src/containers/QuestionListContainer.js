@@ -1,6 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import QuestionList from '../components/QuestionList';
-import Question from '../components/Question';
+import React, { Component, PropTypes } from "react";
+import QuestionList from "../components/QuestionList";
+import Question from "../components/Question";
 
 class QuestionListContainer extends Component {
 
@@ -11,7 +11,7 @@ class QuestionListContainer extends Component {
 
   _retrieveQuestions () {
     let {questionList} = this.props;
-    return questionList.map((question, index) => <Question question = {question} key = {index} id = {index}/>);
+    return questionList.map((question, index) => <Question question = {question} key = {index} id = {index} />);
   }
 
   render() {

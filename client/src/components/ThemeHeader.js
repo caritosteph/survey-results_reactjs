@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from "react";
 
 const ThemeHeader = ({themeList}) => {
   return (
@@ -7,7 +7,7 @@ const ThemeHeader = ({themeList}) => {
         themeList.map((theme, index) => {
 
           let href = "#" + theme.name.replace(/ /g, "");
-          let active = index === 0 ? 'active' : '';
+          let active = (index === 0 ? "active" : "");
 
           return (
             <li className = {active} key = {index} >

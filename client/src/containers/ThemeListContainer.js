@@ -1,7 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-import ThemeList from '../components/ThemeList';
-import ThemeHeader from '../components/ThemeHeader';
-import ThemeBody from '../components/ThemeBody';
+import React, { Component, PropTypes } from "react";
+import ThemeList from "../components/ThemeList";
+import ThemeHeader from "../components/ThemeHeader";
+import ThemeBody from "../components/ThemeBody";
 
 class ThemeListContainer extends Component {
 
@@ -12,7 +12,7 @@ class ThemeListContainer extends Component {
 
   _retrieveThemes () {
     let {themeList} = this.props;
-    return  (
+    return (
       <div className = "nav-tabs-custom">
         <ThemeHeader themeList = {themeList}/>
         <ThemeBody themeList = {themeList}/>

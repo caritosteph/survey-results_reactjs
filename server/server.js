@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 /* eslint-disable import/default */
 
-'use strict';
+"use strict";
 
-import express from 'express';
-import Utils from './Utils';
-import config from './config';
+import express from "express";
+import Utils from "./Utils";
+import config from "./config";
 
 const app =  express();
 
@@ -15,13 +15,13 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/survey_results', (req, res) => {
+app.get("/survey_results", (req, res) => {
   Utils.readJSONFile(res, config.resultsPath);
 });
 
-app.get('/survey_results/:id', (req, res) => {
+app.get("/survey_results/:id", (req, res) => {
   let id = req.params.id;
-  Utils.readJSONFile(res, config.detailPath + '/' + id);
+  Utils.readJSONFile(res, config.detailPath + "/" + id);
 });
 
 app.listen(config.port, () => {

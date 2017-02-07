@@ -1,4 +1,4 @@
-import browserSync from 'browser-sync';
+import browserSync from "browser-sync";
 
 browserSync({
   port: 4000,
@@ -6,10 +6,10 @@ browserSync({
     port: 4001
   },
   server: {
-    baseDir: 'client/dist/'
+    baseDir: "client/dist/"
   },
 
   files: [
-    'client/src/*.html'
+    "client/src/*.html"
   ]
 });

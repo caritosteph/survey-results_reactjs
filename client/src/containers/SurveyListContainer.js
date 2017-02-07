@@ -1,6 +1,6 @@
-import React, {Component, PropTypes} from 'react';
-import SurveyList from '../components/SurveyList';
-import Survey from '../components/Survey';
+import React, { Component, PropTypes } from "react";
+import SurveyList from "../components/SurveyList";
+import Survey from "../components/Survey";
 
 class SurveyListContainer extends Component {
 

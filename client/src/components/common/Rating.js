@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from "react";
 
 const Rating = ({rating}) => {
 
@@ -6,9 +6,9 @@ const Rating = ({rating}) => {
     let stars = [];
     for (let i = 0; i < 5; i++) {
       if( i < parseInt(rating.rating)){
-        stars.push(<i key= {i} className = "fa fa-star"/>);
+        stars.push(<i key= {i} className = "fa fa-star" />);
       }else{
-        stars.push(<i key= {i} className = "fa fa-star-o"/>);
+        stars.push(<i key= {i} className = "fa fa-star-o" />);
       }
     }
     return stars;

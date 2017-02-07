@@ -14,7 +14,7 @@
   margin-top: 0;
   margin-bottom: 5px;
   font-size: 25px;
-  padding-left: 50px;
+  padding-left: 35px;
   color: $font-white;
 }
 .survey-detail-body {
@@ -32,11 +32,15 @@
   background-color: $background-survey-rate;
   color: $font-survey-rate;
   .detail-rate {
-    margin-top: 33px;
+    // margin-top: 23px;
     margin-left: 10px;
   }
   .detail-rate-name {
     font-weight: 200;
+  }
+  .participation-rate{
+    font-size: 12px;
+    text-align: center;
   }
 }
 .survey-detail-footer {

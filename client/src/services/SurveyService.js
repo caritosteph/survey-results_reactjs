@@ -1,12 +1,12 @@
-import 'whatwg-fetch';
-import config from '../configs/config';
+import "whatwg-fetch";
+import config from "../configs/config";
 
 class SurveyService {
 
   static getSurveyResults(url) {
     return fetch(config.baseUrl + url, {
-      method: 'GET',
-      mode: 'cors'
+      method: "GET",
+      mode: "cors"
     })
     .then(response => {
       return response.json();

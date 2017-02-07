@@ -1,7 +1,7 @@
-import React, {Component, PropTypes} from 'react';
-import ResponseList from '../components/ResponseList';
-import Utils from '../utils/Utils';
-import ReactPaginate   from 'react-paginate';
+import React, { Component, PropTypes } from "react";
+import ResponseList from "../components/ResponseList";
+import Utils from "../utils/Utils";
+import ReactPaginate   from "react-paginate";
 
 class ResponseListContainer extends Component {
 
@@ -32,14 +32,15 @@ class ResponseListContainer extends Component {
   }
 
   handlePageClick = (responses) => {
-  let {perPage} = this.props;
-   let selected = responses.selected;
-   let offset = Math.ceil(selected * perPage);
-   let maxOffset = offset + 5;
-   this.setState({offset, maxOffset}, () => {
-     this._loadResponseList();
-   });
- };
+    let {perPage} = this.props;
+    let selected = responses.selected;
+    let offset = Math.ceil(selected * perPage);
+    let maxOffset = offset + perPage;
+
+    this.setState({offset, maxOffset}, () => {
+      this._loadResponseList();
+    });
+  };
   render() {
     let {responses} = this.state;
     let {responseList} = this.props;
@@ -47,7 +48,7 @@ class ResponseListContainer extends Component {
 
     return (
       <div>
-        <ResponseList responseList = {responses} average = {average}/>
+        <ResponseList responseList = {responses} average = {average} />
         <ReactPaginate
           previousLabel = {"«"}
           nextLabel = {"»"}

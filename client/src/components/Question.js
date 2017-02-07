@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import ResponseListContainer from '../containers/ResponseListContainer';
+import React, { PropTypes } from "react";
+import ResponseListContainer from "../containers/ResponseListContainer";
 
 const Question = ({question, id}) => {
   return (
@@ -10,7 +10,7 @@ const Question = ({question, id}) => {
           <h6>{question.description}</h6>
         </div>
         <div className = "box-question-body">
-          <ResponseListContainer responseList = {question.survey_responses} perPage = {5}/>
+          <ResponseListContainer responseList = {question.survey_responses} perPage = {5} />
         </div>
       </div>
     </div>
