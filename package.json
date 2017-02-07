@@ -12,7 +12,7 @@
     "build": "npm run clean-dist && babel-node client/tools/build.js && npm-run-all --parallel open:dist open:back",
     "lint": "esw webpack.config.* client/src client/tools server --color",
     "lint:watch": "npm run lint -- --watch",
-    "open:test": "mocha client/tools/testServer.js client/src/**/*.spec.js --reporter progress",
+    "open:test": "mocha client/tools/testServer.js client/**/*.spec.js --reporter progress",
     "test": "npm run open:test -- --watch"
   },
   "repository": {

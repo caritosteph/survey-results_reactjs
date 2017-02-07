@@ -29,7 +29,7 @@ const Response = ({responseList}) => {
 };
 
 Response.propTypes = {
-  responseList: PropTypes.string.isRequired
+  responseList: PropTypes.array.isRequired
 };
 
 export default Response;
