@@ -24,3 +24,6 @@ npm run test
 * Mocha  : Automated tests with Chai for assertions and Enzyme for React Components, using jsdom I could test   without a browser.
 * ESLint : Reports syntax and style issues.Besides I used eslint-plugin-react for additional ReactJS rules.
 * SASS   : Compiled CSS styles.
+
+![Survey List](https://github.com/caritosteph/surveyresults-reactjs/blob/master/screenshot/surveyList.png)
+![Survey Details](https://github.com/caritosteph/surveyresults-reactjs/blob/master/screenshot/surveyDetail.png)
