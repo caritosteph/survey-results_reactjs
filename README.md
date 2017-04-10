@@ -1,22 +1,22 @@
 # Survey application
-##Get Started
-###Installation Dependencies
+## Get Started
+### Installation Dependencies
 ```
 npm install
 ```
-####Development Environment
+#### Development Environment
 ```
 npm run start
 ```
-####Production Environment
+#### Production Environment
 ```
 npm run build
 ```
-####Test Environment
+#### Test Environment
 ```
 npm run test
 ```
-##Technologies
+## Technologies
 * ReactJS : Fast rendered which help me to create a reusable components and maintainable application.
 * Babel   : Compiles ES6 to ES5.
 * Webpack : Bundles npm packages and JS files into a single file. I also includes hot reloading to avoid refresh all the browser when made a change.
